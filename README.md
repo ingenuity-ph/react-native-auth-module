@@ -3,7 +3,7 @@
 > An Authentication Module using react-native-api-client-wrapper
 
 
-## Requirements
+## Dependencies
 ```sh
 $ npm install --save react-native-api-client-wrapper
 ```
@@ -43,6 +43,60 @@ this.authManager.expoFacebookLogin(Constants.Facebook.API_ENDPOINT)
 }).catch((error) => {
 
 })
+```
+
+##Functions
+```js
+
+  expoFacebookLogin(APIEndpoint) {
+  /**
+   * accepts an APIEndpoint param of your APIServer
+   * returns a Token that will send to the APIEndpoint
+   **/
+  }
+
+  expoGoogleLogin(APIEndpoint) {
+  /**
+   * accepts an APIEndpoint param of your API Server
+   * returns a token that will send to the APIEndpoint
+   **/
+  }
+
+  credentialsLogin(loginUrl, username, password) {
+  /**
+   * default login usage
+   * loginUrl = Login APIEndpoint of your API Server
+   * username, password
+   * returns a Token which you can access by .then((resposne) => {response.key})
+   **/
+  }
+
+  changePassword(Token, url, old_password, new_password, confirm_password) {
+  /**
+   * accepts a Token from your Account, can be null depends on your API Server
+   * url = APIendpoint for your changepassword
+   **/
+  }
+
+  resetPassword(resetPasswordUrl, email) {
+  /**
+   * resetPasswordUrl param = APIEndpoint of your reset password
+   * email = email used in your account to send the details of your new password
+   **/
+  }
+
+  signUp(signUpUrl, params = {}) {
+  /**
+   * signUpUrl = APIEndpoint where you send the params object
+   * params = object type parameter that will send the details of your registration
+   * ex: {
+   * username: username,
+   * password; password,
+   * email: email
+   * }
+   **/
+  }
+
 ```
 
 ## License
