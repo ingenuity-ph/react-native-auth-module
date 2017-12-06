@@ -21,7 +21,7 @@ the AuthManager has 3 parameters.
 3.) GoogleIOSClientID generated from google API for social auth google email Login
 
 ```js
-import {AuthManager} from 'react-native-authhentication-module'
+import {AuthManager} from 'react-native-auth-module'
 import {Constants} from 'your-constants'
 
 let authManager;

@@ -3,9 +3,7 @@ import {
   AsyncStorage,
 } from 'react-native';
 
-import APIUtils from './../lib/api/utils';
 import { APIClient, APIConstants } from 'react-native-api-client-wrapper';
-import credentials from '../services/loginsocialauthcredentials';
 
 /**
  * this function is to register
@@ -28,7 +26,7 @@ function doSignUp(signUpUrl, params) {
  * @param {*} url APIEndpoint for resetPassword
  * @param {*} email email parameter to be sent in the Endpoint
  */
-function resetPassword(url, email) {
+function doResetPassword(url, email) {
   let  headers = {
     'Accept': APIConstants.ContentType.JSON,
     'Content-Type': APIConstants.ContentType.JSON,
@@ -67,6 +65,12 @@ function doChangePassword(Token, url,  oldpassword, newpassword, confirmpassword
   return client.sendRequest(headers,params)
 }
 
+/**
+ * 
+ * @param {*} url API Endpoint for Login
+ * @param {*} username username/email
+ * @param {*} password 
+ */
 function loginWithCredentials(url, username, password) {
     let headers = {
       'Accept': APIConstants.ContentType.JSON,
@@ -81,7 +85,12 @@ function loginWithCredentials(url, username, password) {
   
   }
   
-  function logInwithFacebook(facebook_secretkey, url) {
+  /**
+   * 
+   * @param {*} url API Endpoint where you send the facebooktoken
+   * @param {*} facebook_secretkey secretkey from the facebookdev to access facebook API
+   */
+  function logInwithFacebook(url, facebook_secretkey) {
     return new Promise(function (resolve, reject) {
     Expo.Facebook.logInWithReadPermissionsAsync(facebook_secretkey, {
         behavior: 'system',
@@ -131,6 +140,12 @@ function loginWithCredentials(url, username, password) {
     })
   }
 
+  /**
+   * 
+   * @param {*} androidClientId Android clientID from GoogleAPI
+   * @param {*} iosClientId IOS clientID from googleAPI
+   * @param {*} url Endpoint where you send the Token after logging-in in Google
+   */
   function loginWithGoogle(androidClientId, iosClientId, url) {
     return new Promise(function (resolve, reject) {
       Expo.Google.logInAsync({
@@ -202,12 +217,12 @@ class LoginManager {
     return loginWithCredentials(loginUrl, username, password)
   }
 
-  changePassword(url, old_password, newpassword, confirmpassword) {
-    return changePassword(Token, url, oldpassword, newpassword, confirmpassword);
+  changePassword(Token, url, old_password, new_password, confirm_password) {
+    return doChangePassword(Token, url, old_password, new_password, confirm_password);
   }
 
   resetPassword(resetPasswordUrl, email) {
-    return resetPassword(resetPasswordUrl, email);
+    return doResetPassword(resetPasswordUrl, email);
   }
 
   signUp(signUpUrl, params = {}) {
