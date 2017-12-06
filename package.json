@@ -1,0 +1,17 @@
+{
+  "name": "react-native-authhentication-module",
+  "version": "0.1.0",
+  "description": "An Authentication Module using react-native-api-client-wrapper",
+  "main": "Index.js",
+  "scripts": {
+    "test": "\"echo \"Error: no test specified\" && exit 1\""
+  },
+  "keywords": [
+    "Authentication",
+    "Login",
+    "SocialAuth",
+    "ChangePassword"
+  ],
+  "author": "Redmond Job V. Perez",
+  "license": "ISC"
+}
