@@ -1,4 +1,4 @@
-# react-native-auth-module [![NPM version](https://badge.fury.io/js/react-native-authhentication-module.svg)](https://npmjs.org/package/react-native-authhentication-module) [![Build Status](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module.svg?branch=master)](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module)
+# react-native-auth-module [![NPM version](https://badge.fury.io/js/react-native-auth-module.svg)](https://npmjs.org/package/react-native-auth-module) [![Build Status](https://travis-ci.org/Redmond%20Perez/react-native-auth-module.svg?branch=master)](https://travis-ci.org/Redmond%20Perez/react-native-auth-module)
 
 > An Authentication Module using react-native-api-client-wrapper
 
