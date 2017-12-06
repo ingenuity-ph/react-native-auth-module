@@ -1,4 +1,4 @@
-# react-native-authhentication-module [![NPM version](https://badge.fury.io/js/react-native-authhentication-module.svg)](https://npmjs.org/package/react-native-authhentication-module) [![Build Status](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module.svg?branch=master)](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module)
+# react-native-auth-module [![0.1.0](https://badge.fury.io/js/react-native-authhentication-module.svg)](https://npmjs.org/package/react-native-authhentication-module) [![Build Status](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module.svg?branch=master)](https://travis-ci.org/Redmond%20Perez/react-native-authhentication-module)
 
 > An Authentication Module using react-native-api-client-wrapper
 
@@ -37,7 +37,7 @@ let authManager;
     )
   }
 
-this.authManager.facebookLogin(Constants.Facebook.API_ENDPOINT)
+this.authManager.expoFacebookLogin(Constants.Facebook.API_ENDPOINT)
 .then((response) => {
   
 }).catch((error) => {
