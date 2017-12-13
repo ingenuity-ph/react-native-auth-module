@@ -1,6 +1,6 @@
 {
   "name": "react-native-auth-module",
-  "version": "0.1.12",
+  "version": "1.0.0",
   "description": "An Authentication Module using react-native-api-client-wrapper",
   "main": "Index.js",
   "scripts": {
