@@ -1,6 +1,6 @@
 {
   "name": "react-native-auth-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Authentication Module using react-native-api-client-wrapper",
   "main": "Index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org:ingenuityph/react-native-auth-module.git"
+    "url": "https://github.com/ingenuity-ph/react-native-auth-module"
   },
   "keywords": [
     "Authentication",
@@ -17,5 +17,6 @@
     "ChangePassword"
   ],
   "author": "Redmond Job V. Perez",
-  "license": "ISC"
+  "license": "MIT",
+  "homepage": "https://github.com/ingenuity-ph/react-native-auth-module"
 }
